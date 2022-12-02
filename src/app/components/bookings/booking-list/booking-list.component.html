@@ -1,0 +1,27 @@
+<div class="container my-5">
+  <h1 class="mb-3">Booking List</h1>
+  <table class="table" *ngIf="bookingList && bookingList.length >0">
+    <thead>
+      <tr>
+       <th>Id</th>
+       <th>Name</th>
+       <th>Email</th>
+       <th>Phone</th>
+       <th>Date</th>
+       <th>Price</th>
+     </tr>
+   </thead>
+   <tbody>
+    <tr *ngFor="let booking of bookingList">
+      <td>{{booking.id}}</td>
+      <td>{{booking.name}}</td>
+      <td>{{booking.email}}</td>
+      <td>{{booking.phone}}</td>
+      <td>{{booking.date | date:'shortDate'}}</td>
+      <td>{{booking.price}}</td>
+      <td><a [routerLink] = "['/bookinglist','edit', booking.id]">View</a></td>
+    </tr>
+   </tbody>
+ </table>
+ <p *ngIf="!bookingList || bookingList.length<=0">No Bookings Found </p>
+</div>

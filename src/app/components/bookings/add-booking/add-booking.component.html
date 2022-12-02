@@ -1,0 +1,35 @@
+<div class="container my-5">
+  <h1 class="mb-3" >Add New Booking</h1>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="addBooking()">
+         <div class="mb-3">
+            <label for="name" class="form-label"> Name </label>
+            <input type= "text" class= "form-control" id="name"
+            name ="name" [(ngModel)]="addBookingRequest.name">
+          </div>
+         <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email"
+            name ="email" [(ngModel)]="addBookingRequest.email">
+         </div>
+         <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="number" class="form-control" id="phone"
+            name ="phone" [(ngModel)]="addBookingRequest.phone">
+         </div>
+         <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date"
+            name ="date" [(ngModel)]="addBookingRequest.date">
+         </div>
+         <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price"
+            name ="price" [(ngModel)]="addBookingRequest.price">
+         </div>
+         <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+</div>
